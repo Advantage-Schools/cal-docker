@@ -1,8 +1,8 @@
 FROM node:16 as builder
 
+WORKDIR /calcom
 RUN git submodule update --remote --init
 
-WORKDIR /calcom
 ARG NEXT_PUBLIC_LICENSE_CONSENT
 ARG CALCOM_TELEMETRY_DISABLED
 ARG DATABASE_URL
